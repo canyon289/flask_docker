@@ -1,6 +1,7 @@
+from datetime import datetime
 from flask import Flask
 app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Hello Pasadena Python!'
+    return f'Hello Pasadena Python! {datetime.now().isoformat()}'
